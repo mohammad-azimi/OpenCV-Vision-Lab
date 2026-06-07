@@ -1,80 +1,112 @@
 # OpenCV Vision Lab
 
-A beginner-friendly computer vision playground built with Python and OpenCV.
+A real-time computer vision mini-lab built with Python and OpenCV.
 
-This repository contains a collection of real-time computer vision demos, including camera capture, color detection, multi-view rendering, and face/eye detection. The goal of this project is to practice core OpenCV concepts and present them in a clean, portfolio-ready structure.
+This project demonstrates multiple real-time computer vision techniques using a webcam, including camera capture, color detection, multi-view rendering, face and eye detection, motion detection, and privacy-focused face blurring.
 
 ## Overview
 
-OpenCV Vision Lab is a small computer vision project focused on real-time video processing with a webcam. It demonstrates how Python and OpenCV can be used to capture live video, manipulate frames, detect colors, and identify faces and eyes using Haar Cascade classifiers.
+OpenCV Vision Lab is a beginner-friendly computer vision project designed to practice practical image processing concepts in Python.
 
-This project started as a learning exercise and is being improved into a more organized computer vision mini-lab.
+The repository started as a set of simple OpenCV learning scripts and has been refactored into a cleaner project structure with reusable modules, a command-line entry point, and multiple interactive demos.
 
 ## Features
 
 - Real-time webcam capture
-- Basic video frame processing
-- Color transformation and color detection
-- Multi-view camera display
-- Face detection using Haar Cascades
-- Eye detection using Haar Cascades
-- Simple and beginner-friendly Python scripts
+- FPS display on video frames
+- Screenshot saving with keyboard input
+- HSV-based color detection with live sliders
+- Multi-view display: original, grayscale, edges, and HSV
+- Face and eye detection using Haar Cascade classifiers
+- Motion detection using background subtraction
+- Face blur mode for privacy
+- Organized source code structure
 - Portfolio-ready documentation
 
 ## Project Structure
 
 ```text
-OpenCV-Python/
-├── Camera-and-VideoCapture.py
-├── Camera-and-VideoCapture-MultiView.py
-├── Colors-and-Color-Detection.py
-├── Face-and-Eye-Detection.py
+OpenCV-Vision-Lab/
+├── main.py
 ├── README.md
 ├── requirements.txt
-└── .gitignore
+├── .gitignore
+│
+├── src/
+│   ├── __init__.py
+│   ├── utils.py
+│   ├── camera_capture.py
+│   ├── color_detection.py
+│   ├── multiview_display.py
+│   ├── face_eye_detection.py
+│   ├── motion_detection.py
+│   └── face_blur.py
+│
+├── legacy/
+│   └── original learning scripts
+│
+└── outputs/
+    └── saved screenshots
 ```
 
-## Demo Scripts
+## Demo Commands
 
-### 1. Camera and Video Capture
-
-This script opens the webcam and displays the live video feed. It is the base example for working with real-time camera input in OpenCV.
+List all available demos:
 
 ```bash
-python Camera-and-VideoCapture.py
+python main.py list
 ```
 
-### 2. Color Detection
-
-This script captures video from the webcam and applies color-based processing. It demonstrates how color spaces and masks can be used for basic image processing tasks.
+Run the camera capture demo:
 
 ```bash
-python Colors-and-Color-Detection.py
+python main.py camera
 ```
 
-### 3. Multi-View Display
-
-This script displays multiple views of the same camera feed. It is useful for understanding how frames can be resized, combined, and displayed in different layouts.
+Run the color detection demo:
 
 ```bash
-python Camera-and-VideoCapture-MultiView.py
+python main.py color
 ```
 
-### 4. Face and Eye Detection
-
-This script uses OpenCV Haar Cascade classifiers to detect faces and eyes in real time from the webcam feed.
+Run the face and eye detection demo:
 
 ```bash
-python Face-and-Eye-Detection.py
+python main.py face
 ```
 
-## Technologies Used
+Run the motion detection demo:
 
-- Python
-- OpenCV
-- NumPy
-- Haar Cascade Classifiers
-- Real-time video processing
+```bash
+python main.py motion
+```
+
+Run the face blur demo:
+
+```bash
+python main.py blur
+```
+
+Run the multi-view display demo:
+
+```bash
+python main.py multiview
+```
+
+Use another camera index:
+
+```bash
+python main.py camera --camera 1
+```
+
+## Controls
+
+Inside each OpenCV window:
+
+- Press `q` to quit
+- Press `s` to save a screenshot
+
+Saved screenshots are stored in the `outputs/` folder.
 
 ## Installation
 
@@ -103,48 +135,49 @@ On macOS/Linux:
 source .venv/bin/activate
 ```
 
-Install the dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+## Technologies Used
 
-Run any demo script directly:
-
-```bash
-python Camera-and-VideoCapture.py
-```
-
-Press `q` to close the OpenCV camera window if the script supports keyboard exit.
+- Python
+- OpenCV
+- NumPy
+- Haar Cascade Classifiers
+- Real-time video processing
+- Background subtraction
 
 ## What I Learned
 
 Through this project, I practiced:
 
-- Working with webcam input in Python
-- Reading and displaying video frames
-- Applying basic image processing techniques
-- Using OpenCV color spaces
-- Detecting faces and eyes in real time
-- Structuring a computer vision project for GitHub
+- Capturing video from a webcam
+- Processing frames in real time
+- Working with HSV color space
+- Building interactive OpenCV trackbars
+- Detecting faces and eyes with Haar Cascades
+- Detecting movement using background subtraction
+- Structuring Python code into reusable modules
+- Creating a cleaner GitHub project for portfolio presentation
 
 ## Roadmap
 
 Planned improvements:
 
-- Add FPS display to each demo
-- Add motion detection
-- Add screenshot saving
-- Add face blur mode for privacy
-- Refactor scripts into a cleaner `src/` structure
 - Add demo screenshots and GIF previews
-- Add a command-line menu for running different demos
+- Add object tracking
+- Add hand detection
+- Add QR code detection
+- Add a simple graphical menu
+- Add tests for utility functions
+- Improve project packaging
 
 ## Credits
 
-This project was created while learning OpenCV and was inspired by tutorials from the Tech With Tim YouTube channel.
+This project was created while learning OpenCV and was inspired by beginner-friendly computer vision tutorials.
 
 ## Author
 

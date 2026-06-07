@@ -16,6 +16,6 @@ Thumbs.db
 *.log
 *.tmp
 
-screenshots/
 outputs/
 captures/
+screenshots/

@@ -1,0 +1,1 @@
+"""OpenCV Vision Lab package."""
