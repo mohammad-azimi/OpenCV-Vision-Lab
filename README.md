@@ -1,55 +1,154 @@
-OpenCV Projects
+# OpenCV Vision Lab
 
-This repository contains multiple Python scripts utilizing OpenCV for camera-based applications. Each script performs a different function, showcasing the versatility of OpenCV. The code was developed with the help of tutorials from the Tech with Tim (https://www.youtube.com/c/TechWithTim) YouTube channel.
-***************************
-Table of Contents :
+A beginner-friendly computer vision playground built with Python and OpenCV.
 
-1. Camera and Video Capture
-  
-2. Color Transformation
-  
-3. Multi-View Display
-   
-4. Face and Eye Detection
-   
-5. Installation
-    
-6. Usage
-    
-7. Credits
-***************************
-1. Camera and Video Capture :
+This repository contains a collection of real-time computer vision demos, including camera capture, color detection, multi-view rendering, and face/eye detection. The goal of this project is to practice core OpenCV concepts and present them in a clean, portfolio-ready structure.
 
-This script opens the laptop camera and displays the live video feed. It serves as the base functionality for camera operations.
+## Overview
 
-2. Color Transformation :
+OpenCV Vision Lab is a small computer vision project focused on real-time video processing with a webcam. It demonstrates how Python and OpenCV can be used to capture live video, manipulate frames, detect colors, and identify faces and eyes using Haar Cascade classifiers.
 
-This script opens the camera feed but modifies the colors of the captured video. It applies basic color transformations to demonstrate image manipulation techniques in OpenCV.
+This project started as a learning exercise and is being improved into a more organized computer vision mini-lab.
 
-3. Multi-View Display :
+## Features
 
-This script splits the camera feed into four separate windows, displaying different views simultaneously. It's a useful example of how to handle multiple views or perspectives within a single frame.
+- Real-time webcam capture
+- Basic video frame processing
+- Color transformation and color detection
+- Multi-view camera display
+- Face detection using Haar Cascades
+- Eye detection using Haar Cascades
+- Simple and beginner-friendly Python scripts
+- Portfolio-ready documentation
 
-4. Face and Eye Detection :
+## Project Structure
 
-In this script, the camera feed is enhanced with face and eye detection. OpenCV's Haar Cascades are used to detect faces and eyes in real-time from the video feed.
+```text
+OpenCV-Python/
+├── Camera-and-VideoCapture.py
+├── Camera-and-VideoCapture-MultiView.py
+├── Colors-and-Color-Detection.py
+├── Face-and-Eye-Detection.py
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
 
-5. Installation :
+## Demo Scripts
 
-To run these scripts, you'll need to install the following dependencies:
+### 1. Camera and Video Capture
 
-pip install opencv-python
+This script opens the webcam and displays the live video feed. It is the base example for working with real-time camera input in OpenCV.
 
-pip install numpy
+```bash
+python Camera-and-VideoCapture.py
+```
 
-6. Usage :
+### 2. Color Detection
 
-Simply run each script in your Python environment. For example:
+This script captures video from the webcam and applies color-based processing. It demonstrates how color spaces and masks can be used for basic image processing tasks.
 
-python CameraAndVideoCapture.py
+```bash
+python Colors-and-Color-Detection.py
+```
 
-Each script can be executed individually, and you'll need a camera connected to your system.
+### 3. Multi-View Display
 
-7. Credits :
+This script displays multiple views of the same camera feed. It is useful for understanding how frames can be resized, combined, and displayed in different layouts.
 
-These scripts were created with the guidance of the Tech with Tim (https://www.youtube.com/c/TechWithTim) YouTube tutorials.
+```bash
+python Camera-and-VideoCapture-MultiView.py
+```
+
+### 4. Face and Eye Detection
+
+This script uses OpenCV Haar Cascade classifiers to detect faces and eyes in real time from the webcam feed.
+
+```bash
+python Face-and-Eye-Detection.py
+```
+
+## Technologies Used
+
+- Python
+- OpenCV
+- NumPy
+- Haar Cascade Classifiers
+- Real-time video processing
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mohammad-azimi/OpenCV-Python.git
+cd OpenCV-Python
+```
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+On Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+On macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+Run any demo script directly:
+
+```bash
+python Camera-and-VideoCapture.py
+```
+
+Press `q` to close the OpenCV camera window if the script supports keyboard exit.
+
+## What I Learned
+
+Through this project, I practiced:
+
+- Working with webcam input in Python
+- Reading and displaying video frames
+- Applying basic image processing techniques
+- Using OpenCV color spaces
+- Detecting faces and eyes in real time
+- Structuring a computer vision project for GitHub
+
+## Roadmap
+
+Planned improvements:
+
+- Add FPS display to each demo
+- Add motion detection
+- Add screenshot saving
+- Add face blur mode for privacy
+- Refactor scripts into a cleaner `src/` structure
+- Add demo screenshots and GIF previews
+- Add a command-line menu for running different demos
+
+## Credits
+
+This project was created while learning OpenCV and was inspired by tutorials from the Tech With Tim YouTube channel.
+
+## Author
+
+Mohammad Azimi
+
+- GitHub: [mohammad-azimi](https://github.com/mohammad-azimi)
+- Portfolio: [mohammad-azimi.github.io](https://mohammad-azimi.github.io/)
